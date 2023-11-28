@@ -29,7 +29,7 @@ function insert_btn() {
 
     let ad = document.querySelectorAll('drx-form-section')
     ad[0].querySelector('textarea').value
-    copyText(h1.innerHTML + '\n' + ad[0].querySelector('textarea').value + '\n' + ad[1].querySelector('textarea').value)
+    copyText(h1.innerHTML.replace('广告单元：', '') + '\n' + ad[0].querySelector('textarea').value + '\n' + ad[1].querySelector('textarea').value)
 
     document.querySelector('.copy_ad_code_all').style.color = 'green'
   })
