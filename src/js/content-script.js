@@ -94,7 +94,7 @@ function appendElement() {
     <a class="floating-btn iconfont icon-Tools" title="左键复制详情代码，右键复制首页代码。">
     </a>
     <menu class="items-wrapper">
-    ${getPosition().map(item => `<div data-value='${item.id}' title="${item.name}" class="${id}-menu-item menu-item">${item.name}</div>`).join('')}
+    ${getPosition().map(item => `<div data-value='${item.id}' title="${item.title || item.name}" class="${id}-menu-item menu-item">${item.name}</div>`).join('')}
     </menu>
     `
   if ($('#' + id).length) return
@@ -125,6 +125,7 @@ function appendElement() {
 
   })
 }
+
 function copy_adv_code(id, code_name) {
   let h1 = document.querySelector('.title-container h1')
   let ad = [...document.querySelectorAll('drx-form-section')]
@@ -136,6 +137,7 @@ function copy_adv_code(id, code_name) {
     color: 'green', // blue, red, green, yellow
   })
 }
+
 function makeElementDraggable(elementId) {
   const element = document.getElementById(elementId)
 
@@ -181,15 +183,23 @@ function makeElementDraggable(elementId) {
 function getPosition() {
   return [{
     "id": 2,
-    "name": "首屏"
+    "name": "首屏",
+    "title": 'hp1/dp1'
   },
   {
     "id": 3,
-    "name": "二屏"
+    "name": "二屏",
+    "title": 'hp2/dp2'
   },
   {
     "id": 4,
-    "name": "底部悬浮"
+    "name": "底部悬浮",
+    "title": 'dp底部/hp底部'
+  },
+  {
+    "id": 1,
+    "name": "插屏",
+    "title": '插屏',
   },
   {
     "id": 5,
