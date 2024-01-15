@@ -184,12 +184,12 @@ function getPosition() {
   return [{
     "id": 2,
     "name": "首屏",
-    "title": 'hp1/dp1'
+    "title": 'dp1/hp1'
   },
   {
     "id": 3,
     "name": "二屏",
-    "title": 'hp2/dp2'
+    "title": 'dp2/hp2'
   },
   {
     "id": 4,
