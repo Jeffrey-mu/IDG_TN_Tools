@@ -91,7 +91,7 @@ function injectOnlineStyles(url) {
 function appendElement() {
     const id = 'IDG_TN_Tools'
     let html = `
-    <a class="floating-btn iconfont icon-Tools" title="单击复制详情代码，双击复制首页代码。">
+    <a class="floating-btn iconfont icon-Tools" title="左键复制详情代码，右键复制首页代码。">
     </a>
     <menu class="items-wrapper">
     ${getPosition().map(item => `<div data-value='${item.id}' title="${item.name}" class="${id}-menu-item menu-item">${item.name}</div>`).join('')}
